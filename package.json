@@ -1,0 +1,21 @@
+{
+  "name": "algorithm-ts",
+  "version": "1.0.0",
+  "description": "algorithms for Typescript",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/supoxiao0/Typescript-Datastructure-Algorithm.git"
+  },
+  "author": "supoxiao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/supoxiao0/Typescript-Datastructure-Algorithm/issues"
+  },
+  "homepage": "https://github.com/supoxiao0/Typescript-Datastructure-Algorithm#readme"
+}
