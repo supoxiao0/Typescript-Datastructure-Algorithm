@@ -24,7 +24,7 @@ function merge<T>(
   mid: number,
   compareFn: (a: T, b: T) => number
 ) {
-  const arrayCopy = JSON.parse(JSON.stringify(array))
+  const arrayCopy = array.slice(l, r + 1)
   let i = l
   let j = mid + 1
   for (let k = l; k < r; k++) {
