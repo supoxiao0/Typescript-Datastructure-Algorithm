@@ -1,7 +1,8 @@
+import compareFn from '../../helpers/compareFn'
 export function binarySearch<T>(
   array: T[],
   target: T,
-  compareFn: (a: T, b: T) => number
+  compareFn: compareFn<T>
 ) {
   let l = 0
   let r = array.length - 1

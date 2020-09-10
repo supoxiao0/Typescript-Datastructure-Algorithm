@@ -1,8 +1,9 @@
 import swap from '../../helpers/swap'
+import compareFn from '../../helpers/compareFn'
 
 export function quickSort<T>(
   array: T[],
-  compareFn: (a: T, b: T) => number
+  compareFn: compareFn<T>
 ): T[] {
   sort(array, 0, array.length - 1, compareFn)
   return array
@@ -12,7 +13,7 @@ function sort<T>(
   array: T[],
   l: number,
   r: number,
-  compareFn: (a: T, b: T) => number
+  compareFn: compareFn<T>
 ): void {
   if (l >= r) return
   const random = l + Math.floor(Math.random() * (r - l + 1))

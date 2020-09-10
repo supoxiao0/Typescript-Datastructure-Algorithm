@@ -1,13 +1,9 @@
-export function mergeSort<T>(array: T[], compareFn: (a: T, b: T) => number) {
+import compareFn from '../../helpers/compareFn'
+export function mergeSort<T>(array: T[], compareFn: compareFn<T>) {
   sort(array, 0, array.length - 1, compareFn)
 }
 
-function sort<T>(
-  array: T[],
-  l: number,
-  r: number,
-  compareFn: (a: T, b: T) => number
-) {
+function sort<T>(array: T[], l: number, r: number, compareFn: compareFn<T>) {
   if (l >= r) return
   const mid = Math.floor((l + r) / 2)
   sort(array, l, mid, compareFn)
@@ -22,7 +18,7 @@ function merge<T>(
   l: number,
   r: number,
   mid: number,
-  compareFn: (a: T, b: T) => number
+  compareFn: compareFn<T>
 ) {
   const arrayCopy = array.slice(l, r + 1)
   let i = l
