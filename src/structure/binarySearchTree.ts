@@ -1,9 +1,5 @@
 import compareFn from '../helpers/compareFn'
 
-interface addFn<T> {
-  (e: T, compareFn: compareFn<T>, node?:Node<T>) : any
-}
-
 class Node<T> {
   public e
   public left
@@ -15,3 +11,21 @@ class Node<T> {
   }
 }
 
+/**
+ * add<T>():void 添加元素，不能添加重复元素
+ * remove<T>():void 删除元素
+ * contains<T>():boolean 是否包含元素
+ * getSize():number
+ * isEmpty():boolean 集合是否为空
+ */
+
+export default class BinarySearchTree<T> {
+  private size = 0
+  private root:Node<T> = null
+
+  add<T>(e:T, node?:Node<T>) {
+    if(node === null ) {
+      return this.root = new Node<T>(e)
+    }
+  }
+}
